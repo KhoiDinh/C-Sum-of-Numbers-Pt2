@@ -1,0 +1,51 @@
+// Inputs: numberOfValues, valueOfNumber
+//Outputs: totalSum, negativeSum, positiveSum
+
+
+#include "stdafx.h"
+#include<iostream>;
+using namespace std;
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	//variable names
+	int totalSum,count, valueOfNumber, negativeSum, positiveSum;
+	const int numberOfValues = 10;
+	// sets the values of the variables
+	
+	totalSum = 0;
+	negativeSum = 0;
+	positiveSum = 0;
+	count = 1;
+	
+	
+
+	// process of reading in the numbers and calculating the specified sums
+	while (count++ <= numberOfValues)
+	{
+		//asks user for inputs
+		cout << "Enter a number: ";
+		cin >> valueOfNumber;
+		totalSum = totalSum + valueOfNumber;
+		if (valueOfNumber <= 0)
+		{
+			negativeSum = negativeSum + valueOfNumber;
+		}
+		else
+		{
+			positiveSum = positiveSum + valueOfNumber;
+		}
+	}
+	// outputs the specified sums
+	cout << "The total sum is: " << totalSum << endl;
+	cout << "The sum of the negative numbers is: " << negativeSum << endl;
+	cout << "The sum of the positive numbers is: " << positiveSum << endl;
+	
+	
+	return 0;
+}
+
+
+
+
